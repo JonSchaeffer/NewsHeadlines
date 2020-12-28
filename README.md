@@ -19,10 +19,10 @@ The aim of this project is to grab headlines from the NYTimes API and display th
 </tr>
 <tr>
 <td>section</td>
-<td> If you want one section, simply enter <code>"US"</code> <br> If you want multiple sections, enter them as a list <code>["us", "world"]</code> <br> List of sections: <i>arts, automobiles, books, business, fashion, food, health, home, insider, magazine, movies, nyregion, obituaries, opinion, politics, realestate, science, sports, sundayreview, technology, theater, t-magazine, travel, upshot, us, and world.</i> </td>
+<td> If you want one section, simply enter <code>"us"</code> <br> If you want multiple sections, enter them as a list <code>["us", "world"]</code> <br> List of sections: <i>arts, automobiles, books, business, fashion, food, health, home, insider, magazine, movies, nyregion, obituaries, opinion, politics, realestate, science, sports, sundayreview, technology, theater, t-magazine, travel, upshot, us, and world.</i> </td>
 </tr>
 <tr>
 <td>Number_of_Headlines</td>
-<td> You can enter an int here such as <code>"2"</code>. This will show 2 articles for each section selected. If you want to view all articles for each section selected, enter <code>all</code>. </td>
+<td> You can enter an int here such as <code>"2"</code>. This will show 2 articles for each section selected. If you want to view all articles for each section selected, enter <code>"all"</code>. </td>
 </tr>
 </table>
