@@ -1,3 +1,7 @@
+from samplebase import SampleBase
+from rgbmatrix import graphics, RGBMatrixOptions
+import time
+
 import requests
 import json
 
@@ -45,5 +49,6 @@ def getNews(apiKey, section, numOfHeadlines):
         for y in range (numOfHeadlines):
             print(section[x].upper() + ": " + titles[y])
             print(abstracts[y])
+
 
 getNews(apiKey, section, numOfHeadlines)
