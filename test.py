@@ -2,6 +2,8 @@
 # Display a runtext with double-buffering.
 from samplebase import SampleBase
 from rgbmatrix import graphics
+import requests
+from news import News
 import time
 
 
@@ -19,19 +21,22 @@ class RunText(SampleBase):
         pos = offscreen_canvas.width
         my_text = self.text
 
-        while True:
+        while 1:
             offscreen_canvas.Clear()
-            len = graphics.DrawText(offscreen_canvas, font, pos, 10, textColor, my_text)
+            len = graphics.DrawText(offscreen_canvas, font, pos, 30, textColor, my_text)
             pos -= 1
             if (pos + len < 0):
                 pos = offscreen_canvas.width
 
-            time.sleep(0.05)
+            time.sleep(0.03)
             offscreen_canvas = self.matrix.SwapOnVSync(offscreen_canvas)
-
+            
 
 # Main function
 if __name__ == "__main__":
-    run_text = RunText("This is a test string")
-    if (not run_text.process()):
-        run_text.print_help()
+    news = News()
+    headlines = news.getNews()
+    run_text = RunText(headlines)
+    run_text.process()
+        
+            
